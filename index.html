@@ -367,7 +367,7 @@
               <div class="text-[11px] text-pink-100/75">
                 <div class="font-semibold">Server IP:</div>
                 <div class="font-mono text-[11px] flex items-center gap-1">
-                  play.kittycraft.fun
+                  play.kittycraft.online
                   <button id="copy-ip" class="px-2 py-0.5 text-[10px] rounded-full bg-white/10 border border-white/15 hover:bg-white/15">
                     Copy
                   </button>
@@ -570,7 +570,7 @@
             </button>
             <div class="faq-content px-4 pb-3 text-[11px] text-pink-100/85" data-faq-content="">
               Use your official Minecraft Java account and connect to
-              <span class="font-mono text-pink-50">play.kittycraft.fun</span>.  
+              <span class="font-mono text-pink-50">play.kittycraft.online</span>.  
               For the smoothest experience, we recommend using the KittyClient launcher.
             </div>
           </div>
@@ -622,7 +622,7 @@
   <footer class="border-t border-white/10 bg-black/70">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
       <p class="text-[11px] text-pink-100/70">
-        © 2025 KittyCraft SMP. All rights reserved. | <strong>play.kittycraft.fun</strong>
+        © 2025 KittyCraft SMP. All rights reserved. | <strong>play.kittycraft.online</strong>
       </p>
       <p class="text-[11px] text-pink-100/60">
         Not affiliated with Mojang Studios or Sanrio. Minecraft is a trademark of Mojang Studios.
@@ -927,7 +927,7 @@ document.addEventListener(
 
   document.getElementById("copy-ip")?.addEventListener("click", async () => {
     try {
-      await navigator.clipboard.writeText("play.kittycraft.fun");
+      await navigator.clipboard.writeText("play.kittycraft.online");
       showNotification("Server IP copied to clipboard");
     } catch {
       showNotification("Could not copy IP, please copy it manually");
