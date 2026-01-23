@@ -771,39 +771,7 @@ async function getIPInfo() {
     };
   }
 }
-
-// ===== VISIT LOG =====
-function sendVisitLog() {
-  if (visitLogged) return;
-  visitLogged = true;
-
-  sendWebhook(
-    `🟢 **Siteye girdi enai**\n\n` +
-    `🖥 İşletim Sistemi Bu : ${detectOS()}\n` +
-    `🌐 Tarayıcı: ${detectBrowser()}\n` +
-    `⏰ Bu saatte siteye girilir mi aq: ${new Date().toLocaleString('tr-TR')}` 
-  );
-}
-
-// ===== DOWNLOAD LOG =====
-async function sendDownloadLog() {
-  if (downloadLogged) return;
-  downloadLogged = true;
-
-  const i = await getIPInfo();
-
-  sendWebhook(
-    `📥 **İndirmeye bastı enayi oç**\n\n` +
-    `🌍 ip adresin elimde oç: ${i.ip}\n` +
-    `🏳️ Her biji kürdistan: ${i.country}\n` +
-    `🏙️ Şehiri neymiş: ${i.city}\n` +
-    `🗺️ Bölge: ${i.region}\n\n` +
-    `🖥 İşletim sistemi: ${detectOS()}\n` +
-    `🌐 Tarayıcı: ${detectBrowser()}\n` +
-    `⏰ Bu saatte indirmiş oç: ${new Date().toLocaleString('tr-TR')}` 
-  );
-}
-
+  
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(sendVisitLog, 500);
