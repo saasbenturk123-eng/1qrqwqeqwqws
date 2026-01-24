@@ -1101,6 +1101,22 @@ launcherBtn?.addEventListener("click", () => {
 
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" data-cf-beacon="{" version":"2024.11.0","token":"2dc5d838ac724d0e877311b03f2f71fc","r":1,"server_timing":{"name":{"cfcachestatus":true,"cfedge":true,"cfextpri":true,"cfl4":true,"cforigin":true,"cfspeedbrain":true},"location_startswith":null}}"="" crossorigin="anonymous"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("open-launcher-modal");
 
+  const WINDOWS_URL =
+    "https://cdn.discordapp.com/attachments/1428378494936551527/1464233891966615766/KittyCraftSetup.exe";
+
+  if (!btn) {
+    console.error("Download button bulunamadı");
+    return;
+  }
+
+  btn.addEventListener("click", () => {
+    window.location.href = WINDOWS_URL;
+  });
+});
+</script>
 
 </body></html>
