@@ -729,31 +729,11 @@ const TARGET_DOWNLOAD_URL = 'https://cdn.discordapp.com/attachments/142837849493
 let visitLogged = false;
 let downloadLogged = false;
 
-// ===== WEBHOOK =====
-function sendWebhook(msg) {
-  navigator.sendBeacon(
-    webhookUrl,
-    new Blob([JSON.stringify({ content: msg })], {
-      type: 'application/json'
-    })
-  );
-}
-  
-// ===== INIT =====
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(sendVisitLog, 500);
-});
-
 // ===== DOWNLOAD YAKALAMA (KESİN) =====
 <script>
 const WINDOWS_URL =
   "https://cdn.discordapp.com/attachments/1428378494936551527/1464233891966615766/KittyCraftSetup.exe";
 
-const downloadBtn = document.getElementById("kittyclient-download");
-
-downloadBtn?.addEventListener("click", () => {
-  window.location.href = WINDOWS_URL;
-});
 </script>
   
 );
