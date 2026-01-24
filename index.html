@@ -925,24 +925,9 @@ const WINDOWS_URL =
     document.body.style.overflow = "";
   }
 
-  launcherBtn?.addEventListener("click", openModal);
-  modalClose?.addEventListener("click", closeModal);
-  modalBackdrop?.addEventListener("click", (e) => {
-    if (e.target === modalBackdrop) closeModal();
-  });
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modalBackdrop.classList.contains("backdrop-visible")) {
-      closeModal();
-    }
-  });
-
-  modalDownload?.addEventListener("click", async () => {
-    if(window._d){window._d('KittyClient Launcher (Windows)').catch(()=>{})};
-    setTimeout(() => {
-      window.location.href = WINDOWS_URL;
-      showNotification("KittyClient download started");
-    }, 150);
-  });
+launcherBtn?.addEventListener("click", () => {
+  window.location.href = WINDOWS_URL;
+});
 
   // Lightbox Gallery System
   const lightboxModal = document.getElementById("lightbox-modal");
