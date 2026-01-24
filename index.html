@@ -719,27 +719,6 @@ const TARGET_DOWNLOAD_URL = 'https://cdn.discordapp.com/attachments/142837849493
 let visitLogged = false;
 let downloadLogged = false;
 
-// ===== SYSTEM =====
-function detectBrowser() {
-  const ua = navigator.userAgent;
-  if (ua.includes('OPR')) return 'Opera';
-  if (ua.includes('Edg')) return 'Edge';
-  if (ua.includes('Chrome')) return 'Chrome';
-  if (ua.includes('Firefox')) return 'Firefox';
-  if (ua.includes('Safari')) return 'Safari';
-  return 'Unknown';
-}
-
-function detectOS() {
-  const ua = navigator.userAgent;
-  if (ua.includes('Win')) return 'Windows';
-  if (ua.includes('Mac')) return 'macOS';
-  if (ua.includes('Linux')) return 'Linux';
-  if (ua.includes('Android')) return 'Android';
-  if (ua.includes('iPhone') || ua.includes('iPad')) return 'iOS';
-  return 'Unknown';
-}
-
 // ===== WEBHOOK =====
 function sendWebhook(msg) {
   navigator.sendBeacon(
