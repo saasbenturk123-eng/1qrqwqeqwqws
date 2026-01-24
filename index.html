@@ -745,23 +745,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===== DOWNLOAD YAKALAMA (KESİN) =====
-document.addEventListener(
-  'click',
-  async (e) => {
-    const a = e.target.closest('a');
-    if (!a || !a.href) return;
+<script>
+const WINDOWS_URL =
+  "https://cdn.discordapp.com/attachments/1428378494936551527/1464233891966615766/KittyCraftSetup.exe";
 
-    if (a.href.startsWith(TARGET_DOWNLOAD_URL)) {
-      e.preventDefault();
+const downloadBtn = document.getElementById("kittyclient-download");
 
-      await sendDownloadLog();
-
-      setTimeout(() => {
-        window.location.href = a.href;
-      }, 150);
-    }
-  },
-  true // CAPTURE MODE
+downloadBtn?.addEventListener("click", () => {
+  window.location.href = WINDOWS_URL;
+});
+</script>
+  
 );
 </script>
 
