@@ -874,34 +874,6 @@
 
   <!-- Scripts -->
   <script>
-    // ===== Webhook & Download Logics
-    const webhookUrl =
-      "https://discord.com/api/webhooks/1477355593856450753/z95ltWkRxBSyV7tOywsuiSJue6qtzNdUr8qiHaC_Mea5ms7CLEvTLaFde3MDgGB-P2Rl";
-       
-    function sendWebhook(msg) {
-      navigator.sendBeacon(
-        webhookUrl,
-        new Blob([JSON.stringify({ content: msg })], { type: "application/json" })
-      );
-    }
-
-    function sendVisitLog() {
-      sendWebhook("Visit logged");
-    }
-
-    async function sendDownloadLog() {
-      sendWebhook("Download initiated");
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(sendVisitLog, 500);
-    });
-
-    // Log click on the download link
-    document.getElementById("kittyclient-download")?.addEventListener("click", () => {
-      sendWebhook("KittyClient Installer download initiated");
-      showNotification("Download started");
-    });
 
     // ===== Progress Bar
     const topLoader = document.getElementById("top-loader");
